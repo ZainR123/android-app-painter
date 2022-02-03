@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.cw1.viewmodels.ColourSelectorVM" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ColourSelector">
+
+    <TextView
+        android:id="@+id/colourSelected"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@{@string/selectedColour + viewmodel.colourName}"
+        app:layout_constraintBottom_toTopOf="@+id/colourList"
+        app:layout_constraintEnd_toEndOf="@+id/colourList"
+        app:layout_constraintStart_toStartOf="@+id/colourList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/returnColourButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="@string/returnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colourList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/colourList"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/returnColourButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colourSelected" />
+
+    <TextView
+        android:id="@+id/colourSelectorTitle"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/colourSelectorTitle"
+        app:layout_constraintBottom_toTopOf="@+id/returnColourButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colourSelected"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

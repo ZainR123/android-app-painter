@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.cw1.viewmodels.ShapeSelectorVM" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShapeSelector">
+
+    <TextView
+        android:id="@+id/shapeAndSizeTitle"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:text="@string/shapeAndSizeTitle"
+        app:layout_constraintBottom_toTopOf="@+id/brushShape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/brushList"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/brushWidthSelected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushShape" />
+
+    <TextView
+        android:id="@+id/brushShape"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="@{@string/selectedShape + viewmodel.shapeName}"
+        app:layout_constraintBottom_toTopOf="@+id/brushList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeAndSizeTitle" />
+
+    <TextView
+        android:id="@+id/brushWidthSelected"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="@{@string/selectedWidth +viewmodel.brushWidth}"
+        app:layout_constraintBottom_toTopOf="@+id/widthBrush"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushList" />
+
+    <Button
+        android:id="@+id/returnShapeSizeButton"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="@string/returnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/widthBrush" />
+
+    <EditText
+        android:id="@+id/widthBrush"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:autofillHints="20"
+        android:ems="10"
+        android:hint="@string/enterWidth"
+        android:maxLength="2"
+        android:inputType="number"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/returnShapeSizeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brushWidthSelected" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

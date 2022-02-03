@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="Typos">CW1</string>
+    <string name="selectedShape">Selected Brush Shape: </string>
+    <string name="selectedWidth">Selected Brush Width: </string>
+    <string name="enterWidth">Enter brush width</string>
+    <string name="selectedColour">Colour Selected: </string>
+    <string name="returnText">Save</string>
+    <string name="fingerPainterTitle">Finger Painter</string>
+    <string name="colourSelectorTitle">Colour Selector</string>
+    <string name="shapeAndSizeTitle">Shape and Size Selector</string>
+</resources>
